@@ -36,9 +36,9 @@ declare class NextI18Next {
   withNamespaces(
     namespace: Namespace | NamespaceExtractor,
     options?: WithNamespacesOptions
-  ): <P extends WithNamespaces>(
+  ): <P>(
     component: React.ComponentType<P>
-  ) => React.ComponentType<Subtract<P, WithNamespaces>>;
+  ) => React.ComponentType<P>;
 
   appWithTranslation<P extends object>(Component: React.ComponentType<P> | React.ElementType<P>): any;
 }
